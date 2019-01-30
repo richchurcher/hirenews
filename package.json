@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "nuke": "rm -rf node_modules && yarn && watchman watch-del-all && yarn start --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
